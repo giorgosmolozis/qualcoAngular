@@ -1,0 +1,29 @@
+<h2>🌍 Countries</h2>
+
+
+<table class="country-table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Area (km²)</th>
+    <th>Details</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (c of sortedCountries; track c.countryId) {
+      <tr>
+        <td>{{ c.name }}</td>
+        <td>{{ c.countryCode3 }}</td>
+        <td>{{ c.area | number }}</td>
+        <td>
+          <a [routerLink]="['/country', c.countryId]" [queryParams]="{ name: c.name }">
+            View →
+          </a>
+        </td>
+      </tr>
+    }
+  </tbody>
+
+</table>
+

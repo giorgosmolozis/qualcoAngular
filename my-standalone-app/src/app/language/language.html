@@ -1,0 +1,16 @@
+<h2>🗣️ Languages for : {{countryName}}</h2>
+
+<table class="language-table">
+  <thead>
+  <tr>
+    <th>Language</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (lang of language; track lang.languageId) {
+      <tr>
+        <td>{{ lang.language }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
